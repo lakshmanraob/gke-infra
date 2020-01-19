@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: <preffered-name>-deployment
-        image: gcr.io/searce-playground/<preffered-name>-jenkins-img:latest          
+        image: gcr.io/<gcp-project-name>/<preffered-name>-jenkins-img:latest          
         ports:
         - containerPort: 8080
