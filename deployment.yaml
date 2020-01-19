@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <preffered-name>-deployment
+  namespace: <preffered-name>-ns
+  labels:
+    app: <preffered-name>-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: <preffered-name>-deployment
+  template:
+    metadata:
+      labels:
+        app: <preffered-name>-deployment
+    spec:
+      containers:
+      - name: <preffered-name>-deployment
+        image: gcr.io/searce-playground/<preffered-name>-jenkins-img:latest          
+        ports:
+        - containerPort: 8080

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: <preffered-name>-ingress
+  namespace: <preffered-name>-ns
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: <preffered-name>-ext-ip
+    networking.gke.io/managed-certificates: <preffered-name>-cert
+spec:
+  rules:
+  - host: <preffered-dns-name>
+    http:
+      paths:
+        - path: "/*"
+          backend:
+            serviceName: <preffered-name>-deployment-5475p
+            servicePort: 80
