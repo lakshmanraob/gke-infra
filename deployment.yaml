@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: <preffered-name>-deployment
-        image: gcr.io/<gcp-project-name>/<preffered-name>-jenkins-img:latest          
+        image: gcr.io/<project_name>/<preffered-image-name>:latest         
         ports:
         - containerPort: 8080
         readinessProbe:
