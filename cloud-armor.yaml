@@ -1,8 +1,8 @@
 apiVersion: cloud.google.com/v1beta1
 kind: BackendConfig
 metadata:
-  namespace: jenkins-ns
-  name: jenkins-backend
+  namespace: <preffered-name>-ns
+  name: <preffered-name>-backend
 spec:
   securityPolicy:
-    name: "jenkins-ingress-security-policy"
+    name: "<preffered-name>-ingress-security-policy"
