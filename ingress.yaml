@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: <preffered-name>-ingress
-  namespace: <preffered-name>-ns
+  name: gh-check-ingress
+  namespace: gh-check-ns
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: <preffered-name>-ext-ip
-    networking.gke.io/managed-certificates: <preffered-name>-cert
+    kubernetes.io/ingress.global-static-ip-name: gh-check-ext-ip
+    networking.gke.io/managed-certificates: gh-check-cert
 spec:
   rules:
-  - host: <preffered-dns-name>
+  - host: ghchecks
     http:
       paths:
         - path: "/*"
           backend:
-            serviceName: <preffered-name>-deployment-5475p
+            serviceName: gh-check-deployment-5475p
             servicePort: 80

@@ -1,8 +1,8 @@
 apiVersion: cloud.google.com/v1beta1
 kind: BackendConfig
 metadata:
-  namespace: <preffered-name>-ns
-  name: <preffered-name>-backend
+  namespace: gh-check-ns
+  name: gh-check-backend
 spec:
   securityPolicy:
-    name: "<preffered-name>-ingress-security-policy"
+    name: "gh-check-ingress-security-policy"

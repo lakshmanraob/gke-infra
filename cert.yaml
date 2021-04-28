@@ -1,8 +1,8 @@
 apiVersion: networking.gke.io/v1beta1
 kind: ManagedCertificate
 metadata:
-  name: <preffered-name>-cert
-  namespace: <preffered-name>-ns
+  name: gh-check-cert
+  namespace: gh-check-ns
 spec:
   domains:
-    - <preffered-dns-name>
+    - ghchecks

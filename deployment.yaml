@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: <preffered-name>-deployment
-  namespace: <preffered-name>-ns
+  name: gh-check-deployment
+  namespace: gh-check-ns
   labels:
-    app: <preffered-name>-deployment
+    app: gh-check-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: <preffered-name>-deployment
+      app: gh-check-deployment
   template:
     metadata:
       labels:
-        app: <preffered-name>-deployment
+        app: gh-check-deployment
     spec:
       containers:
-      - name: <preffered-name>-deployment
-        image: gcr.io/<project_name>/<preffered-image-name>:latest         
+      - name: gh-check-deployment
+        image: gcr.io/anonymous-311205/ghcheck:latest         
         ports:
         - containerPort: 8080
         readinessProbe:
